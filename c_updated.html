@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #401f1f; 
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';  
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 17, 17, 0.4); 
+        }
+        .signup-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 350px;
+            background: rgba(161, 47, 47, 0.2); 
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(90, 56, 56, 0.2);
+            text-align: center;
+            margin: auto;
+        }
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #120808;
+            margin-bottom: 1.5rem;
+        }
+        .signup-form input, .signup-form select {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(72, 48, 48, 0.8);
+            color: #0c0707;
+        }
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #54769a;
+            color: #372c2c;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+        .motto {
+            position: absolute;
+            bottom: 1rem;
+            font-size: 1.2rem;
+            color: #0d0c0c;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+
+    <img src="image-260nw-2176920931.jpg.webp" alt="Company Logo" class="company-logo">
+
+    <div class="company-name">House of Fun 18+</div>
+
+    <form class="signup-form">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
+            <option value="prefer-not-to-say">Prefer Not to Say</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+<div class="motto">WE ARE MATURE HERE</div>
+
+</body>
+</html>
